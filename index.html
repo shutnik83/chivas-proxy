@@ -1,0 +1,463 @@
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CHIVAS PROXY</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Inter;
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
+
+.container{
+width:1200px;
+max-width:92%;
+margin:auto;
+}
+
+/* NAVBAR */
+
+nav{
+
+position:sticky;
+top:0;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:22px 0;
+
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(12px);
+
+z-index:100;
+}
+
+.logo{
+
+font-weight:700;
+font-size:22px;
+letter-spacing:1px;
+
+background:linear-gradient(90deg,#fff,#aaa);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+}
+
+.nav-links a{
+
+margin-left:28px;
+text-decoration:none;
+color:white;
+
+opacity:.65;
+transition:.25s;
+font-size:15px;
+
+}
+
+.nav-links a:hover{
+
+opacity:1;
+}
+
+/* HERO */
+
+.hero{
+
+text-align:center;
+padding:120px 0 80px;
+
+}
+
+.hero h1{
+
+font-size:58px;
+font-weight:700;
+
+background:linear-gradient(90deg,#fff,#999);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+}
+
+.hero p{
+
+margin-top:16px;
+opacity:.65;
+}
+
+/* MAIN CARD */
+
+.main-card{
+
+margin-top:60px;
+
+display:flex;
+gap:40px;
+
+background:linear-gradient(180deg,#0a0a0a,#050505);
+
+border:1px solid rgba(255,255,255,0.07);
+
+border-radius:20px;
+
+padding:45px;
+
+box-shadow:0 0 60px rgba(0,0,0,.5);
+
+}
+
+.download-left{
+
+flex:1;
+}
+
+.version{
+
+display:flex;
+align-items:center;
+gap:15px;
+margin-bottom:35px;
+
+}
+
+.icon{
+
+width:50px;
+height:50px;
+
+border-radius:50%;
+
+background:#111;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:20px;
+
+}
+
+/* FEATURES */
+
+.features{
+
+display:flex;
+gap:20px;
+}
+
+.feature{
+
+flex:1;
+
+background:#0d0d0d;
+
+border-radius:14px;
+
+border:1px solid rgba(255,255,255,0.06);
+
+padding:20px;
+
+transition:.25s;
+
+}
+
+.feature:hover{
+
+transform:translateY(-4px);
+
+border:1px solid rgba(255,255,255,0.2);
+
+}
+
+/* BUTTON */
+
+.download-btn{
+
+margin-top:35px;
+
+display:inline-block;
+
+padding:12px 28px;
+
+border-radius:10px;
+
+border:1px solid rgba(255,255,255,0.2);
+
+text-decoration:none;
+color:white;
+
+transition:.25s;
+
+}
+
+.download-btn:hover{
+
+background:white;
+color:black;
+
+}
+
+/* UPDATES */
+
+.updates{
+
+width:320px;
+
+background:#0d0d0d;
+
+border-radius:14px;
+
+border:1px solid rgba(255,255,255,0.06);
+
+padding:20px;
+
+}
+
+.update{
+
+margin-top:12px;
+
+background:#111;
+
+padding:12px;
+
+border-radius:8px;
+
+font-size:14px;
+
+opacity:.8;
+
+}
+
+/* SECTIONS */
+
+.section{
+
+padding:120px 0;
+
+}
+
+.section h2{
+
+text-align:center;
+
+font-size:40px;
+
+margin-bottom:20px;
+
+}
+
+.section p{
+
+text-align:center;
+opacity:.65;
+
+margin-bottom:50px;
+
+}
+
+.flow{
+
+background:#0a0a0a;
+
+border-radius:16px;
+
+border:1px solid rgba(255,255,255,0.06);
+
+padding:40px;
+
+text-align:center;
+
+line-height:1.8;
+
+font-family:monospace;
+
+}
+
+/* FOOTER */
+
+footer{
+
+text-align:center;
+
+opacity:.5;
+
+padding:60px 0;
+
+}
+
+/* GLOW BACKGROUND */
+
+body:before{
+
+content:"";
+
+position:fixed;
+
+top:-200px;
+left:-200px;
+
+width:600px;
+height:600px;
+
+background:radial-gradient(circle,#1a1a1a,transparent);
+
+z-index:-1;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<nav>
+
+<div class="logo">CHIVAS PROXY</div>
+
+<div class="nav-links">
+
+<a href="#home">Главная</a>
+<a href="#about">О проекте</a>
+<a href="#features">Возможности</a>
+<a href="#download">Скачать</a>
+<a href="https://github.com" target="_blank">GitHub</a>
+
+</div>
+
+</nav>
+
+<section class="hero" id="home">
+
+<h1>CHIVAS PROXY</h1>
+
+<p>Лёгкий WebSocket прокси для Telegram</p>
+
+</section>
+
+<section class="container" id="download">
+
+<div class="main-card">
+
+<div class="download-left">
+
+<div class="version">
+
+<div class="icon">⚡</div>
+
+<div>
+
+<h3>CHIVAS PROXY 1.0</h3>
+<span style="opacity:.6;font-size:14px">Последний релиз</span>
+
+</div>
+
+</div>
+
+<div class="features">
+
+<div class="feature">
+
+<h4>Лёгкий</h4>
+<p style="opacity:.6;font-size:14px">
+Минимальная нагрузка
+</p>
+
+</div>
+
+<div class="feature">
+
+<h4>WebSocket</h4>
+<p style="opacity:.6;font-size:14px">
+Туннель Telegram
+</p>
+
+</div>
+
+<div class="feature">
+
+<h4>Быстрый</h4>
+<p style="opacity:.6;font-size:14px">
+Мгновенное соединение
+</p>
+
+</div>
+
+</div>
+
+<a class="download-btn" href="#">Скачать APK →</a>
+
+</div>
+
+<div class="updates">
+
+<h3>Обновления</h3>
+
+<div class="update">Оптимизация WebSocket</div>
+<div class="update">Исправление SOCKS5</div>
+<div class="update">Улучшена стабильность</div>
+<div class="update">Оптимизация MTProto</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="about">
+
+<h2>Как работает</h2>
+
+<p>CHIVAS PROXY направляет Telegram через WebSocket туннель.</p>
+
+<div class="flow">
+
+Telegram App  
+↓  
+SOCKS5 Proxy (127.0.0.1:1080)  
+↓  
+TG WS Proxy  
+↓  
+WebSocket TLS  
+↓  
+Telegram Data Centers  
+
+</div>
+
+</section>
+
+<footer>
+
+CHIVAS PROXY © 2026
+
+</footer>
+
+</div>
+
+</body>
+</html>
+```
